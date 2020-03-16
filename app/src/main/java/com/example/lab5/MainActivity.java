@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         addCarBtn = findViewById(R.id.addBtn);
         addTxt = findViewById(R.id.addCar);
+
+
         //TODO 1
         carsList = findViewById(R.id.lv_list_cars);
         //TODO 2
@@ -45,10 +48,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String newCar = addTxt.getText().toString();
                 carAdapter.addCar(newCar,R.drawable.car_icon);
+                addTxt.setText("");
                 carAdapter.notifyDataSetChanged();
 
             }
         });
+
+
+
     }
 }
 
