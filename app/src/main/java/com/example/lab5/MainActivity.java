@@ -49,10 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        carsList.setAdapter(carAdapter);
-
-
     }
 }
 
